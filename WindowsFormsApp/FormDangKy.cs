@@ -176,9 +176,8 @@ namespace WindowsFormsApp
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FormDangNhap formDangNhap = new FormDangNhap();
-            formDangNhap.Show();
-            this.Hide();
+            
+            
         }
     }
 }

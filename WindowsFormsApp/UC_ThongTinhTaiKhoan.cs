@@ -31,7 +31,7 @@ namespace WindowsFormsApp
             {
                 txtSĐT.Text = dt.Rows[0]["SDT"].ToString();
                 txtChucvu.Text = dt.Rows[0]["Quyen"].ToString();
-                txtEmail.Text = dt.Rows[0]["Email"].ToString();
+               // txtEmail.Text = dt.Rows[0]["Email"].ToString();
                 txtGioiTinh.Text = dt.Rows[0]["GioiTinh"].ToString();
                 txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
                 //txtChucvu.Text = dt.Rows[0]["ChucVu"].ToString();

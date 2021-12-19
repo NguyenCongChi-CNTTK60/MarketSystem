@@ -12,7 +12,7 @@ namespace DAO
         string str;
         public Chuoiketnoi()
         {
-            str = @"Data Source=DESKTOP-LRQ8VCB\SQLEXPRESS;Initial Catalog=QLCuaHangThoiTrang;Integrated Security=True";
+            str = @"Data Source=DESKTOP-LRQ8VCB\SQLEXPRESS;Initial Catalog=QLSieuThi;Integrated Security=True";
         }
 
         public SqlConnection sqlConnection()

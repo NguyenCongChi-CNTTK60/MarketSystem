@@ -238,12 +238,6 @@
     <Compile Include="FormDangKy.Designer.cs">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,12 +261,6 @@
     </Compile>
     <Compile Include="FormSDT.Designer.cs">
       <DependentUpon>FormSDT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSignUp.Designer.cs">
-      <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemKhachHang.cs">
       <SubType>Form</SubType>
@@ -335,6 +323,12 @@
     </Compile>
     <Compile Include="UC_CaLamViecNhanVien.Designer.cs">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DangKyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DangKyTaiKhoan.Designer.cs">
+      <DependentUpon>UC_DangKyTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
@@ -462,9 +456,6 @@
     <Compile Include="UC_XacNhanSDT.Designer.cs">
       <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -473,9 +464,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSDT.resx">
       <DependentUpon>FormSDT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSignUp.resx">
-      <DependentUpon>FormSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
@@ -508,6 +496,9 @@
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DangKyTaiKhoan.resx">
+      <DependentUpon>UC_DangKyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_DoiMatKhau.resx">
       <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
@@ -608,6 +599,8 @@
     <None Include="Resources\Capture.PNG" />
     <None Include="Resources\8b814fa66a3676d9f1090a4e8df515ba.jpg" />
     <None Include="Resources\Capture1.PNG" />
+    <None Include="Resources\Capture2.PNG" />
+    <None Include="Resources\Capture3.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

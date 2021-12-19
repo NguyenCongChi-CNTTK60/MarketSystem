@@ -31,7 +31,40 @@ namespace WindowsFormsApp
 
 
         FormTrangChu f = new FormTrangChu();
-        private void btnDangNhap_Click(object sender, EventArgs e)
+       
+
+
+       // FormSignUp n = new FormSignUp();
+        private void lblDangky_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+      
+
+        
+
+       
+
+        
+
+
+        bool Login(string userName, string passWord)
+        {
+            return NhanVienBUS.Intance.Login(userName, passWord);
+        }
+
+       
+       
+
+     
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDangNhap_Click_1(object sender, EventArgs e)
         {
             string tenDangNhap = txtTenDangNhap.Text;
             string passWord = txtMatKhau.Text;
@@ -43,17 +76,23 @@ namespace WindowsFormsApp
             }
             else
                 lblCanhBao.Text = "Sai tài khoản hoặc mật khẩu!";
-                lblCanhBao.ForeColor = Color.Brown;
+            lblCanhBao.ForeColor = Color.Brown;
         }
-        
 
-
-       // FormSignUp n = new FormSignUp();
-        private void lblDangky_Click(object sender, EventArgs e)
+        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
         {
-            FormSignUp n = new FormSignUp();
-            n.Show();
-            this.Hide();
+
+            if (chkHienThiMK.Checked == true)
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+                txtMatKhau.PasswordChar = '*';
+        }
+
+        private void txtTenDangNhap_TextChanged_1(object sender, EventArgs e)
+        {
+            lblCanhBao.Text = "";
         }
 
         private void txtTenDangNhap_Click(object sender, EventArgs e)
@@ -64,7 +103,7 @@ namespace WindowsFormsApp
 
         private void txtTenDangNhap_Leave(object sender, EventArgs e)
         {
-            if(txtTenDangNhap.Text == "")
+            if (txtTenDangNhap.Text == "")
             {
                 txtTenDangNhap.Text = "VD: VanA";
                 txtTenDangNhap.ForeColor = Color.Silver;
@@ -86,30 +125,29 @@ namespace WindowsFormsApp
             }
         }
 
-
-
-        bool Login(string userName, string passWord)
-        {
-            return NhanVienBUS.Intance.Login(userName, passWord);
-        }
-
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
         {
             lblCanhBao.Text = "";
         }
 
-        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
+        private void addUC(UserControl userControl)
         {
-
-            if (chkHienThiMK.Checked == true)
-            {
-                txtMatKhau.PasswordChar = '\0';
-            }
-            else
-                txtMatKhau.PasswordChar = '*';
+            userControl.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(userControl);
+            userControl.BringToFront();
         }
 
-        private void lblBanQuenMK_Click(object sender, EventArgs e)
+
+
+
+        private void lblDangky_Click_1(object sender, EventArgs e)
+        {
+            UC_DangKyTaiKhoan f = new UC_DangKyTaiKhoan();
+            addUC(f);
+        }
+
+        private void lblBanQuenMK_Click_1(object sender, EventArgs e)
         {
             FormSDT f = new FormSDT();
             f.Show();

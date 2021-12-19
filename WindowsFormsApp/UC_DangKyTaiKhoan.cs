@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class FormSignUp : Form
+    public partial class UC_DangKyTaiKhoan : UserControl
     {
+
         private string MaNV;
-        public FormSignUp()
+        public UC_DangKyTaiKhoan()
         {
             InitializeComponent();
             cmbGioiTinh.SelectedIndex = 0;
@@ -22,7 +23,6 @@ namespace WindowsFormsApp
         }
 
 
-        //FormLogin f = new FormLogin();
         private void lblDangNhap_Click(object sender, EventArgs e)
         {
             FormLogin f = new FormLogin();
@@ -68,16 +68,7 @@ namespace WindowsFormsApp
 
         private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkHienThiMK.Checked == true)
-            {
-               txtMatkhau.PasswordChar = '\0';
-                
-            }
-            else
-            {
-                txtMatkhau.PasswordChar = '*';
-                
-            }
+
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -90,8 +81,8 @@ namespace WindowsFormsApp
                 if (dt.Rows.Count > 0)
                 {
 
-                    lblThongbao.Text = "Tên đăng nhập đã tồn tại";
-                    lblThongbao.ForeColor = Color.Brown;
+                    //lblThongbao.Text = "Tên đăng nhập đã tồn tại";
+                    
                 }
                 else
                 {
@@ -102,12 +93,12 @@ namespace WindowsFormsApp
                         LamMoi();
                         MaNV = Matudong();
                     }
-                    else
-                        lblThongbao.Text = "Đăng ký tài khoản thất bại";
-                        lblThongbao.ForeColor = Color.Brown;
+                  
+                        //lblThongbao.Text = "Đăng ký tài khoản thất bại";
+                    
                 }
             }
-            }
+        }
 
 
 
@@ -138,7 +129,7 @@ namespace WindowsFormsApp
 
         private void txtTennv_Leave(object sender, EventArgs e)
         {
-            if(txtTennv.Text == "")
+            if (txtTennv.Text == "")
             {
                 txtTennv.Text = "VD: Nguyễn Văn A";
                 txtTennv.ForeColor = Color.Silver;
@@ -205,11 +196,7 @@ namespace WindowsFormsApp
             }
         }
 
-        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
-        {
-            lblThongbao.Text = "";
-        }
-
+       
 
 
         private bool check_data()
@@ -217,53 +204,60 @@ namespace WindowsFormsApp
             if (string.IsNullOrEmpty(txtTennv.Text))
             {
 
-                lblThongbao.Text = "Vui lòng nhập tên của bạn";
-                lblThongbao.ForeColor = Color.Brown;
+                //lblThongbao.Text = "Vui lòng nhập tên của bạn";
+                
                 return false;
 
-            }else
-           
+            }
+            else
+
 
             if (string.IsNullOrEmpty(txtSĐT.Text))
             {
+
+                //lblThongbao.Text = "Vui lòng nhập SĐT của bạn";
                 
-                lblThongbao.Text = "Vui lòng nhập SĐT của bạn";
-                lblThongbao.ForeColor = Color.Brown;
                 return false;
-            }else
-           
+            }
+            else
+
 
 
             if (string.IsNullOrEmpty(txtTenDangNhap.Text))
             {
-             
-                lblThongbao.Text = "Vui lòng nhập tên đăng nhập";
-                lblThongbao.ForeColor = Color.Brown;
+
+                //lblThongbao.Text = "Vui lòng nhập tên đăng nhập";
+               
                 return false;
-            }else
-            
+            }
+            else
+
 
             if (string.IsNullOrEmpty(txtMatkhau.Text))
             {
+
+                //lblThongbao.Text = "Vui lòng nhập mật khẩu";
                 
-                lblThongbao.Text = "Vui lòng nhập mật khẩu";
-                lblThongbao.ForeColor = Color.Brown;
                 return false;
             }
-            
+
 
             return true;
         }
 
-        private void txtTennv_TextChanged(object sender, EventArgs e)
+        private void lblDangNhap_Click_1(object sender, EventArgs e)
         {
-            lblThongbao.Text = "";
+            FormLogin f = new FormLogin();
+            f.Show();
+            this.Hide();
         }
 
-        private void txtSĐT_TextChanged(object sender, EventArgs e)
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            lblThongbao.Text = "";
+            FormLogin f = new FormLogin();
+            f.Show();
+            this.Hide();
         }
     }
-    }
+}
 
