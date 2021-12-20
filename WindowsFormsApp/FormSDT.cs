@@ -55,8 +55,10 @@ namespace WindowsFormsApp
             {
                 if (dt.Rows.Count > 0)
                 {
-                    UC_XacNhanMa uC_XacNhanMa = new UC_XacNhanMa(txtSDT.Text);
-                    addUC(uC_XacNhanMa);
+                    FormXacNhanOTP f = new FormXacNhanOTP();
+                    f.Show();
+                    this.Hide();
+
                 }
                 else
                 {

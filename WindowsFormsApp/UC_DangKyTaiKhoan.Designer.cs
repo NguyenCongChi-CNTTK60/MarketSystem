@@ -29,22 +29,7 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDangNhap = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -69,12 +54,29 @@ namespace WindowsFormsApp
             this.txtMatkhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnQuaylai = new FontAwesome.Sharp.IconButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
@@ -82,188 +84,6 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.iconPictureBox5);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.iconPictureBox4);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.iconPictureBox3);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.iconPictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(426, 1012);
-            this.panel2.TabIndex = 3;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkGray;
-            this.label11.Location = new System.Drawing.Point(63, 967);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(263, 78);
-            this.label11.TabIndex = 308;
-            this.label11.Text = "Copy right by group together @2021\r\n\r\n\r\n";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(63, 332);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(341, 26);
-            this.label6.TabIndex = 307;
-            this.label6.Text = "Vui lòng điền đầy đủ thông tin đăng ký tài khoản\r\n";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(65, 298);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 32);
-            this.label5.TabIndex = 306;
-            this.label5.Text = "Đăng ký tài khoản";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkGray;
-            this.label7.Location = new System.Drawing.Point(66, 558);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(283, 26);
-            this.label7.TabIndex = 305;
-            this.label7.Text = "Vui lòng xác nhận mã qua số điện thoại ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(65, 526);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 32);
-            this.label8.TabIndex = 304;
-            this.label8.Text = "Xác nhận mã OTP";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkGray;
-            this.label9.Location = new System.Drawing.Point(64, 675);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(203, 26);
-            this.label9.TabIndex = 303;
-            this.label9.Text = "Thay đổi mật khẩu của bạn \r\n";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGray;
-            this.label10.Location = new System.Drawing.Point(63, 643);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(166, 32);
-            this.label10.TabIndex = 302;
-            this.label10.Text = "Đổi mật khẩu mới";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DarkGray;
-            this.panel5.Location = new System.Drawing.Point(32, 560);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 90);
-            this.panel5.TabIndex = 300;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGray;
-            this.panel4.Location = new System.Drawing.Point(31, 446);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 90);
-            this.panel4.TabIndex = 296;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(31, 332);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 90);
-            this.panel3.TabIndex = 292;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(66, 444);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(281, 26);
-            this.label4.TabIndex = 291;
-            this.label4.Text = "Vui lòng xác nhận số điện thoại của bạn";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(65, 412);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 32);
-            this.label2.TabIndex = 290;
-            this.label2.Text = "Cấp lại mật khẩu";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DarkGray;
-            this.panel6.Location = new System.Drawing.Point(31, 218);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3, 90);
-            this.panel6.TabIndex = 288;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(63, 220);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 26);
-            this.label1.TabIndex = 287;
-            this.label1.Text = "Vui lòng xác nhận tài khoản và mật khẩu của bạn";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(63, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 32);
-            this.label3.TabIndex = 286;
-            this.label3.Text = "Đăng nhập hệ thống";
             // 
             // panel1
             // 
@@ -308,7 +128,7 @@ namespace WindowsFormsApp
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.HoverState.Parent = this.btnDangNhap;
-            this.btnDangNhap.Location = new System.Drawing.Point(711, 684);
+            this.btnDangNhap.Location = new System.Drawing.Point(742, 689);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.ShadowDecoration.Parent = this.btnDangNhap;
@@ -666,12 +486,194 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.TabIndex = 298;
             this.txtTenDangNhap.TextOffset = new System.Drawing.Point(15, 0);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.iconPictureBox5);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.iconPictureBox4);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.iconPictureBox3);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.iconPictureBox2);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.iconPictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(426, 1012);
+            this.panel2.TabIndex = 323;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkGray;
+            this.label11.Location = new System.Drawing.Point(63, 967);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(263, 78);
+            this.label11.TabIndex = 308;
+            this.label11.Text = "Copy right by group together @2021\r\n\r\n\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(63, 332);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(341, 26);
+            this.label6.TabIndex = 307;
+            this.label6.Text = "Vui lòng điền đầy đủ thông tin đăng ký tài khoản\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(65, 298);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 32);
+            this.label5.TabIndex = 306;
+            this.label5.Text = "Đăng ký tài khoản";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGray;
+            this.label7.Location = new System.Drawing.Point(66, 558);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(283, 26);
+            this.label7.TabIndex = 305;
+            this.label7.Text = "Vui lòng xác nhận mã qua số điện thoại ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGray;
+            this.label8.Location = new System.Drawing.Point(65, 526);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 32);
+            this.label8.TabIndex = 304;
+            this.label8.Text = "Xác nhận mã OTP";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkGray;
+            this.label9.Location = new System.Drawing.Point(64, 675);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 26);
+            this.label9.TabIndex = 303;
+            this.label9.Text = "Thay đổi mật khẩu của bạn \r\n";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkGray;
+            this.label10.Location = new System.Drawing.Point(63, 643);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(166, 32);
+            this.label10.TabIndex = 302;
+            this.label10.Text = "Đổi mật khẩu mới";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Location = new System.Drawing.Point(32, 560);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(3, 90);
+            this.panel5.TabIndex = 300;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Location = new System.Drawing.Point(31, 446);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 90);
+            this.panel4.TabIndex = 296;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Location = new System.Drawing.Point(31, 332);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(3, 90);
+            this.panel3.TabIndex = 292;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(66, 444);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(281, 26);
+            this.label4.TabIndex = 291;
+            this.label4.Text = "Vui lòng xác nhận số điện thoại của bạn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(65, 412);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 32);
+            this.label2.TabIndex = 290;
+            this.label2.Text = "Cấp lại mật khẩu";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Location = new System.Drawing.Point(31, 218);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 90);
+            this.panel6.TabIndex = 288;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(63, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(347, 26);
+            this.label1.TabIndex = 287;
+            this.label1.Text = "Vui lòng xác nhận tài khoản và mật khẩu của bạn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(63, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 32);
+            this.label3.TabIndex = 286;
+            this.label3.Text = "Đăng nhập hệ thống";
+            // 
             // iconPictureBox5
             // 
             this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox5.ForeColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gray;
             this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.Gray;
             this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox5.IconSize = 45;
             this.iconPictureBox5.Location = new System.Drawing.Point(13, 640);
@@ -683,9 +685,9 @@ namespace WindowsFormsApp
             // iconPictureBox4
             // 
             this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gray;
             this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.Gray;
             this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox4.IconSize = 45;
             this.iconPictureBox4.Location = new System.Drawing.Point(12, 526);
@@ -697,9 +699,9 @@ namespace WindowsFormsApp
             // iconPictureBox3
             // 
             this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gray;
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.Gray;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 45;
             this.iconPictureBox3.Location = new System.Drawing.Point(12, 412);
@@ -724,9 +726,9 @@ namespace WindowsFormsApp
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gray;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.DarkGray;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gray;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 45;
             this.iconPictureBox1.Location = new System.Drawing.Point(12, 185);
@@ -757,11 +759,16 @@ namespace WindowsFormsApp
             this.btnQuaylai.UseVisualStyleBackColor = false;
             this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // UC_DangKyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDangNhap);
@@ -787,7 +794,6 @@ namespace WindowsFormsApp
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtTenDangNhap);
-            this.Controls.Add(this.panel2);
             this.Name = "UC_DangKyTaiKhoan";
             this.Size = new System.Drawing.Size(1373, 1012);
             this.panel2.ResumeLayout(false);
@@ -803,28 +809,6 @@ namespace WindowsFormsApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDangNhap;
         private System.Windows.Forms.Label label23;
@@ -850,5 +834,27 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label21;
         private Guna.UI2.WinForms.Guna2TextBox txtTenDangNhap;
         private FontAwesome.Sharp.IconButton btnQuaylai;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

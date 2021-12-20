@@ -117,7 +117,7 @@ namespace WindowsFormsApp
         private void HienThi()
         {
             DataTable dt = KhachHangBUS.Intance.HienThi();
-            dgvKH.DataSource = dt;
+            dgvHd.DataSource = dt;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -129,11 +129,11 @@ namespace WindowsFormsApp
         {
             int indexx;
             indexx = e.RowIndex;
-            txtKH.Text = dgvKH.Rows[indexx].Cells[1].Value.ToString();
-            txtMaKH.Text = dgvKH.Rows[indexx].Cells[0].Value.ToString();
-            txtDiachi.Text = dgvKH.Rows[indexx].Cells[2].Value.ToString();
-            txtSĐT.Text = dgvKH.Rows[indexx].Cells[3].Value.ToString();
-            txtEmail.Text = dgvKH.Rows[indexx].Cells[4].Value.ToString();
+            txtKH.Text = dgvHd.Rows[indexx].Cells[1].Value.ToString();
+            txtMaKH.Text = dgvHd.Rows[indexx].Cells[0].Value.ToString();
+            txtDiachi.Text = dgvHd.Rows[indexx].Cells[2].Value.ToString();
+            txtSĐT.Text = dgvHd.Rows[indexx].Cells[3].Value.ToString();
+            txtEmail.Text = dgvHd.Rows[indexx].Cells[4].Value.ToString();
             txtKH.ForeColor = Color.Black;
             txtDiachi.ForeColor = Color.Black;
             txtMaKH.ForeColor = Color.Black;
@@ -291,7 +291,7 @@ namespace WindowsFormsApp
             if (!string.IsNullOrEmpty(txtTimkiem.Text))
             {
                 DataTable dt = KhachHangBUS.Intance.TimKiem(txtTimkiem.Text);
-                dgvKH.DataSource = dt;
+                dgvHd.DataSource = dt;
             }
             else
                 HienThi();

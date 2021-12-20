@@ -72,7 +72,7 @@ namespace WindowsFormsApp
 
 
 
-
+        
 
 
 
@@ -91,57 +91,56 @@ namespace WindowsFormsApp
             UC_ThongKe _ThongKe = new UC_ThongKe();
             Phanquyen(_ThongKe, _HienThiQuyen);         
             ButtonHide();
-            MovePanle(btnThongKe);
+           
             btnThongKe.ForeColor = Color.White;
             btnThongKe.IconColor = Color.White;
         }
 
 
-        private void MovePanle(Control control)
-        {
-            pnlDiChuyen.Top = control.Top;
-            pnlDiChuyen.Height = control.Height;
-        }
+      
 
 
         private void ButtonHide()
         {
             // 1. btnTrangchu
 
-            btnTrangchu.ForeColor = Color.Silver;
+            // btnTrangchu.BackColor = new Color;
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 48, 135);
+            btnTrangchu.BackColor = myRgbColor;
             btnTrangchu.IconColor = Color.Silver;
 
 
 
             // 2. btnKhachhang
 
-            btnKhachHang.ForeColor = Color.Silver;
+            btnKhachHang.BackColor = myRgbColor;
             btnKhachHang.IconColor = Color.Silver;
 
             // 3. btnBanhang
 
-            btnBanHang.ForeColor = Color.Silver;
+            btnBanHang.BackColor = myRgbColor;
             btnBanHang.IconColor = Color.Silver;
 
             // 4. btnNhanvien
 
-            btnNhanVien.ForeColor = Color.Silver;
+            btnNhanVien.BackColor = myRgbColor;
             btnNhanVien.IconColor = Color.Silver;
 
             // 5. btnKhohang
 
-            btnKhoHang.ForeColor = Color.Silver;
+            btnKhoHang.BackColor = myRgbColor;
             btnKhoHang.IconColor = Color.Silver;
 
 
             // 6. btnNhacungcap
 
-            btnNhaCungCap.ForeColor = Color.Silver;
+            btnNhaCungCap.BackColor = myRgbColor;
             btnNhaCungCap.IconColor = Color.Silver;
 
             // 7. btnThongke
 
-            btnThongKe.ForeColor = Color.Silver;
+            btnThongKe.BackColor = myRgbColor;
             btnThongKe.IconColor = Color.Silver;
 
 
@@ -151,29 +150,30 @@ namespace WindowsFormsApp
             btnDangXuat.IconColor = Color.Silver;
 
 
-            // 9. btnKhuyenMai
-
-            btnKhuyenMai.ForeColor = Color.Silver;
-            btnKhuyenMai.IconColor = Color.Silver;
+          
+          
 
 
         }
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
+
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 48, 135);
             UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
             addUC(_TrangChu);
-            MovePanle(btnTrangchu);
+           
             ButtonHide();
-            btnTrangchu.ForeColor = Color.White;
-            btnTrangchu.IconColor = Color.White;
+            btnTrangchu.BackColor = Color.White;
+            btnTrangchu.IconColor = myRgbColor;
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
             UC_BanHang _BanHang = new UC_BanHang(lblMaNV.Text,lblTenNV.Text);
             addUC(_BanHang);
-            MovePanle(btnBanHang);
+            
             ButtonHide();
             btnBanHang.ForeColor = Color.White;
             btnBanHang.IconColor = Color.White;
@@ -181,12 +181,14 @@ namespace WindowsFormsApp
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 48, 135);
             UC_KhachHang _KhachHang = new UC_KhachHang();
             addUC(_KhachHang);
-            MovePanle(btnKhachHang);
+
             ButtonHide();
-            btnKhachHang.ForeColor = Color.White;
-            btnKhachHang.IconColor = Color.White;
+            btnKhachHang.BackColor = Color.White;
+            btnKhachHang.IconColor = myRgbColor;
         }
 
 
@@ -198,7 +200,7 @@ namespace WindowsFormsApp
             UC_NhanVien _NhanVien = new UC_NhanVien();
            // UC_HienThiQuyen _HienThiQuyen = new UC_HienThiQuyen();
             Phanquyen(_NhanVien, _HienThiQuyen);
-            MovePanle(btnNhanVien);
+           
             ButtonHide();
             btnNhanVien.ForeColor = Color.White;
             btnNhanVien.IconColor = Color.White;
@@ -208,7 +210,7 @@ namespace WindowsFormsApp
         {
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
             Phanquyen(_NhaCungCap, _HienThiQuyen);
-            MovePanle(btnNhaCungCap);
+        
             ButtonHide();
             btnNhaCungCap.ForeColor = Color.White;
             btnNhaCungCap.IconColor = Color.White;
@@ -218,7 +220,7 @@ namespace WindowsFormsApp
         {
             UC_KhoHang _KhoHang = new UC_KhoHang();
             Phanquyen(_KhoHang, _HienThiQuyen);
-            MovePanle(btnKhoHang);
+            
             ButtonHide();
             btnKhoHang.ForeColor = Color.White;
             btnKhoHang.IconColor = Color.White;
@@ -230,10 +232,9 @@ namespace WindowsFormsApp
         {
             UC_KhuyenMai _KhuyenMai = new UC_KhuyenMai();
             Phanquyen(_KhuyenMai, _HienThiQuyen);
-            MovePanle(btnKhuyenMai);
+        
             ButtonHide();
-            btnKhuyenMai.ForeColor = Color.White;
-            btnKhuyenMai.IconColor = Color.White;
+           
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

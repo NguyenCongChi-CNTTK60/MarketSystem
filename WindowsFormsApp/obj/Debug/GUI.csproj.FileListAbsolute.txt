@@ -1686,3 +1686,5 @@ C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\GUI.cspr
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DangKyTaiKhoan.resources
+C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormMatKhauMoi.resources
+C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormXacNhanOTP.resources

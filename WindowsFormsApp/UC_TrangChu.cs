@@ -19,13 +19,37 @@ namespace WindowsFormsApp
         public UC_TrangChu(string tennv)
         {
             InitializeComponent();
-            getDataChart();
-            getdataLable();
+            //getDataChart();
+           // getdataLable();
             this.tennv = tennv;
             lblTenNhanVien.Text = tennv;
-            HidesubMenu();
+            // HidesubMenu();
+            cmbTonKho.SelectedIndex = 0;
+            cmbDoanhthu.SelectedIndex = 0;
         }
 
+
+
+        private void getDataChart()
+        {
+            chart1.Titles.Clear();
+            DateTime today = DateTime.Now;
+            DateTime bd = new DateTime(today.Year, today.Month, 1);
+            DateTime kt = bd.AddMonths(1).AddDays(-1);
+            string query = "EXEC USP_ThongKeDoanhThuTrongThang @ngaybd , @ngaykt";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { bd, kt });
+            chart1.DataSource = data;
+            chart1.Series["Doanh Thu"].XValueMember = "TongTien";
+            chart1.Series["Doanh Thu"].YValueMembers = "Ngay";
+           // chart1.Titles.Add("THỐNG KÊ DOANH THU");
+            chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(59, 82, 132);
+            //chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
+            //chart1.ChartAreas[0].AxisX.Minimum = 0;
+            //chart1.Series[0].ChartType = SeriesChartType.Column;
+        }
+
+
+        /*
         private void getdataLable()
         {
             string tkKH = "select count(*) AS [SoLuong] from KhachHang";
@@ -105,6 +129,6 @@ namespace WindowsFormsApp
             }
             else
                 subMenu.Visible = false;
-        }
+        } */
     }
 }
