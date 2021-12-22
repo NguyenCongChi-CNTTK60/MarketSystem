@@ -14,16 +14,17 @@ namespace WindowsFormsApp
     {
         private string manv, tennv;
         private string luumanv, luutennv;
-        public UC_KhoHang()    //string manv, string tennv)
+        public UC_KhoHang(string manv, string tennv)    //string manv, string tennv)
         {
             InitializeComponent();
             //loadData();
-            // this.manv = manv;
-            //luumanv = manv;
-            //this.tennv = tennv;
-            //luutennv = tennv;
+            this.manv = manv;
+            luumanv = manv;
+            this.tennv = tennv;
+            luutennv = tennv;
             cmbĐVT.SelectedIndex = 0;
             cmbLoaiHang.SelectedIndex = 0;
+            cmbQuayhang.SelectedIndex = 0;
             HienThi();
             
             
@@ -54,25 +55,7 @@ namespace WindowsFormsApp
         }
         
 
-        private void dgvHH_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexx;
-            indexx = e.RowIndex;
-            txtTenMH.Text = dgvHH.Rows[indexx].Cells[1].Value.ToString();
-            txtMaMH.Text = dgvHH.Rows[indexx].Cells[0].Value.ToString();
-            txtGiaBan.Text = dgvHH.Rows[indexx].Cells[4].Value.ToString();
-            txtSL.Text = dgvHH.Rows[indexx].Cells[3].Value.ToString();
-            cmbĐVT.Text = dgvHH.Rows[indexx].Cells[2].Value.ToString();
-            cmbLoaiHang.Text = dgvHH.Rows[indexx].Cells[5].Value.ToString();
-            txtTenMH.ForeColor = Color.Black;
-            txtMaMH.ForeColor = Color.Black;
-            txtGiaBan.ForeColor = Color.Black;
-            txtSL.ForeColor = Color.Black;
-            cmbĐVT.ForeColor = Color.Black;
-            cmbLoaiHang.ForeColor = Color.Black;
-        }
-
-
+       
 
 
         private void addUC(UserControl uc)
@@ -84,23 +67,33 @@ namespace WindowsFormsApp
         }
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
-            UC_NhapHang _NhapHang = new UC_NhapHang();
+            UC_NhapHang _NhapHang = new UC_NhapHang(luumanv,luutennv);
             addUC(_NhapHang);
         }
 
-        private void cmbLoaiHang_Click(object sender, EventArgs e)
-        {
-            list = LoaiHangBUS.Intance.getListLoaiHang();
-            cmbLoaiHang.DataSource = list;
-            cmbLoaiHang.ValueMember = "MaLH";
-            cmbLoaiHang.DisplayMember = "TenLH";
-        }
+       
+
+        string temp1;
+        string temp2;
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+           
+            DataTable dt = QuayHangBUS.Intance.TimKiemQH(cmbQuayhang.Text);
+            if (dt.Rows.Count > 0)
+            {
+                temp1 = dt.Rows[0]["MaQH"].ToString();
+            }
+
+            DataTable dt1 = DonViTinhBUS.Intance.TimKiemDVT(cmbĐVT.Text);
+            if (dt1.Rows.Count > 0)
+            {
+                temp2 = dt1.Rows[0]["MaDVT"].ToString();
+            }
+
 
             if (check_data() == true) {
-                if (MatHangBUS.Intance.suaHH(txtMaMH.Text, txtTenMH.Text, temp, txtGiaBan.Text, cmbĐVT.Text))
+                if (MatHangBUS.Intance.suaHH(txtMaMH.Text, txtTenMH.Text, temp, txtGiaBan.Text,temp2 ,temp1))
                 {
                     MessageBox.Show("Sửa mặt hàng thành công", "Thông báo");
                     HienThi();
@@ -227,5 +220,94 @@ namespace WindowsFormsApp
             }
             return true;
         }
+
+
+
+    
+
+        private void dgvHH_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            txtTenMH.Text = dgvHH.Rows[indexx].Cells[1].Value.ToString();
+            txtMaMH.Text = dgvHH.Rows[indexx].Cells[0].Value.ToString();
+            txtGiaBan.Text = dgvHH.Rows[indexx].Cells[4].Value.ToString();
+            txtSL.Text = dgvHH.Rows[indexx].Cells[3].Value.ToString();
+            cmbĐVT.Text = dgvHH.Rows[indexx].Cells[2].Value.ToString();
+            cmbLoaiHang.Text = dgvHH.Rows[indexx].Cells[5].Value.ToString();
+            cmbQuayhang.Text = dgvHH.Rows[indexx].Cells[6].Value.ToString();
+            txtTenMH.ForeColor = Color.Black;
+            txtMaMH.ForeColor = Color.Black;
+            txtGiaBan.ForeColor = Color.Black;
+            txtSL.ForeColor = Color.Black;
+            cmbĐVT.ForeColor = Color.Black;
+            cmbLoaiHang.ForeColor = Color.Black;
+            cmbQuayhang.ForeColor = Color.Black;
+
+
+         
+
+          
+        }
+
+
+        public List<DonViTinhDTO> getListDVT()
+        {
+            string query = "select * from DonViTinh";
+            List<DonViTinhDTO> list = new List<DonViTinhDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                DonViTinhDTO product = new DonViTinhDTO(item);
+                list.Add(product);
+            }
+            return list;
+        }
+        List<DonViTinhDTO> list1;
+
+        private void cmbĐVT_Click(object sender, EventArgs e)
+        {
+            list1 = getListDVT();
+            cmbĐVT.DataSource = list1;
+            cmbĐVT.ValueMember = "MaDVT";
+            cmbĐVT.DisplayMember = "TenDVT";
+        }
+
+        private void cmbLoaiHang_Click(object sender, EventArgs e)
+        {
+            list = LoaiHangBUS.Intance.getListLoaiHang();
+            cmbLoaiHang.DataSource = list;
+            cmbLoaiHang.ValueMember = "MaLH";
+            cmbLoaiHang.DisplayMember = "TenLH";
+        }
+
+        private void cmbQuayhang_Click(object sender, EventArgs e)
+        {
+
+            list2 = getListQuayHang();
+            cmbQuayhang.DataSource = list2;
+            cmbQuayhang.ValueMember = "MaQH";
+            cmbQuayhang.DisplayMember = "TenQH";
+
+        }
+
+        private void cmbĐVT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public List<QuayHangDTO> getListQuayHang()
+        {
+            string query = "select * from QuayHang";
+            List<QuayHangDTO> list = new List<QuayHangDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                QuayHangDTO product = new QuayHangDTO(item);
+                list.Add(product);
+            }
+            return list;
+        }
+        List<QuayHangDTO> list2;
     }
 }

@@ -49,12 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaLamViecBUS.cs" />
+    <Compile Include="DonViTinhBUS.cs" />
     <Compile Include="GiamGiaBUS.cs" />
     <Compile Include="LoaiHangBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
     <Compile Include="HoaDonBUS.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="QuayHangBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietHDBUS.cs" />

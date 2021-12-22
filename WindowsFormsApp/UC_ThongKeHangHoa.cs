@@ -24,7 +24,7 @@ namespace WindowsFormsApp
         private void Hienthi()
         {
             DataTable dt = MatHangBUS.Intance.TKMatHang();
-            dgvHh.DataSource = dt;
+            dgvHd.DataSource = dt;
         }
 
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApp
             if (!string.IsNullOrEmpty(txtTimkiem.Text))
             {
                 DataTable dt = MatHangBUS.Intance.TimKiemMH(tk);
-                dgvHh.DataSource = dt;
+                dgvHd.DataSource = dt;
             }
             else
                 Hienthi();

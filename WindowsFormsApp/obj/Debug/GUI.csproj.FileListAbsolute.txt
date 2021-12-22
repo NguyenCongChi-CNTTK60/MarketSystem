@@ -1658,7 +1658,6 @@ C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsF
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormTrangChu1.resources
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.ReportPhieuNhap.resources
-C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_CaLamViecNhanVien.resources
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_HienThiQuyen.resources
 C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhachHang.resources

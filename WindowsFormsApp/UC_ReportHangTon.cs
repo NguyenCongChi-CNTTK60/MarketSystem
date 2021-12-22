@@ -31,7 +31,7 @@ namespace WindowsFormsApp
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();
             string query = "select * from MatHang";
-            string query1 = "select MatHang.MaMH,TenMH,DonVi,GiaBan,MatHang.SoLuong, sum(ChitietPN.Soluong) as [SLNhap], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [SLBan] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
+            string query1 = "select MatHang.MaMH,TenMH,TenDVT,GiaBan,MatHang.SoLuong, sum(ChitietPN.Soluong) as [SLNhap], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [SLBan] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH inner join DonViTinh on MatHang.MaDVT = DonViTinh.MaDVT group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,TenDVT,MatHang.GiaBan";
             SqlDataAdapter dta = new SqlDataAdapter(query1, con);
             DataSet1 dataSet1 = new DataSet1();
             dta.Fill(dataSet1, "DataTable3");

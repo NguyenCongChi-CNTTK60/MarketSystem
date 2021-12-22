@@ -35,10 +35,6 @@ namespace WindowsFormsApp
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BoBtnTrangChu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BoTrangChu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -48,7 +44,18 @@ namespace WindowsFormsApp
             this.btnBanHang = new FontAwesome.Sharp.IconButton();
             this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnTrangchu = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BoBtnTrangChu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.BoTrangChu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.BobtnKhachHang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.BobtnNhanvien = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.BoNhaCungCap = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.BobtnKhohang = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.BoBanhang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.BoThongKE = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,30 +123,6 @@ namespace WindowsFormsApp
             this.panel2.Size = new System.Drawing.Size(80, 145);
             this.panel2.TabIndex = 34;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(80, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1587, 1150);
-            this.panel1.TabIndex = 5;
-            // 
-            // BoBtnTrangChu
-            // 
-            this.BoBtnTrangChu.BorderRadius = 10;
-            this.BoBtnTrangChu.TargetControl = this.btnTrangchu;
-            // 
-            // BoTrangChu
-            // 
-            this.BoTrangChu.BorderRadius = 15;
-            this.BoTrangChu.TargetControl = this;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 25;
-            this.guna2Elipse1.TargetControl = this.panel1;
-            // 
             // btnDangXuat
             // 
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
@@ -174,6 +157,7 @@ namespace WindowsFormsApp
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.Location = new System.Drawing.Point(12, 851);
             this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(81, 65);
             this.btnThongKe.TabIndex = 32;
             this.btnThongKe.Text = "          ";
@@ -214,6 +198,7 @@ namespace WindowsFormsApp
             this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaCungCap.Location = new System.Drawing.Point(12, 744);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhaCungCap.Size = new System.Drawing.Size(81, 65);
             this.btnNhaCungCap.TabIndex = 30;
             this.btnNhaCungCap.Text = "        ";
@@ -234,6 +219,7 @@ namespace WindowsFormsApp
             this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhoHang.Location = new System.Drawing.Point(9, 638);
             this.btnKhoHang.Name = "btnKhoHang";
+            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnKhoHang.Size = new System.Drawing.Size(84, 65);
             this.btnKhoHang.TabIndex = 7;
             this.btnKhoHang.Text = "          ";
@@ -254,6 +240,7 @@ namespace WindowsFormsApp
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.Location = new System.Drawing.Point(12, 541);
             this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhanVien.Size = new System.Drawing.Size(81, 65);
             this.btnNhanVien.TabIndex = 29;
             this.btnNhanVien.Text = "      ";
@@ -274,6 +261,7 @@ namespace WindowsFormsApp
             this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBanHang.Location = new System.Drawing.Point(9, 448);
             this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnBanHang.Size = new System.Drawing.Size(84, 65);
             this.btnBanHang.TabIndex = 28;
             this.btnBanHang.Text = "          ";
@@ -324,10 +312,69 @@ namespace WindowsFormsApp
             this.btnTrangchu.UseVisualStyleBackColor = false;
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(80, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1587, 1150);
+            this.panel1.TabIndex = 5;
+            // 
+            // BoBtnTrangChu
+            // 
+            this.BoBtnTrangChu.BorderRadius = 10;
+            this.BoBtnTrangChu.TargetControl = this.btnTrangchu;
+            // 
+            // BoTrangChu
+            // 
+            this.BoTrangChu.BorderRadius = 20;
+            this.BoTrangChu.TargetControl = this;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 25;
+            this.guna2Elipse1.TargetControl = this.panel1;
+            // 
             // BobtnKhachHang
             // 
             this.BobtnKhachHang.BorderRadius = 10;
             this.BobtnKhachHang.TargetControl = this.btnKhachHang;
+            // 
+            // BobtnNhanvien
+            // 
+            this.BobtnNhanvien.BorderRadius = 10;
+            this.BobtnNhanvien.TargetControl = this.btnNhanVien;
+            // 
+            // BoNhaCungCap
+            // 
+            this.BoNhaCungCap.ElipseRadius = 10;
+            this.BoNhaCungCap.TargetControl = this.btnNhaCungCap;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // BobtnKhohang
+            // 
+            this.BobtnKhohang.ElipseRadius = 10;
+            this.BobtnKhohang.TargetControl = this.btnKhoHang;
+            // 
+            // BoBanhang
+            // 
+            this.BoBanhang.BorderRadius = 10;
+            this.BoBanhang.TargetControl = this.btnBanHang;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 5;
+            this.bunifuElipse2.TargetControl = this;
+            // 
+            // BoThongKE
+            // 
+            this.BoThongKE.BorderRadius = 10;
+            this.BoThongKE.TargetControl = this.btnThongKe;
             // 
             // FormTrangChu1
             // 
@@ -368,5 +415,12 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse BoTrangChu;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse BobtnKhachHang;
+        private Guna.UI2.WinForms.Guna2Elipse BobtnNhanvien;
+        private Bunifu.Framework.UI.BunifuElipse BoNhaCungCap;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse BobtnKhohang;
+        private Guna.UI2.WinForms.Guna2Elipse BoBanhang;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Guna.UI2.WinForms.Guna2Elipse BoThongKE;
     }
 }

@@ -5,7 +5,7 @@ namespace DTO
     public class MatHangDTO
     {
  
-        private string maMH, tenMH, donVi;
+        private string maMH, tenMH, maDVT, maQH;
         private int soLuong, giaBan;
 
         public MatHangDTO()
@@ -16,14 +16,15 @@ namespace DTO
         {
             this.MaMH = row["MaMH"].ToString();
             this.TenMH = row["TenMH"].ToString();
-            this.DonVi = row["DonVi"].ToString();
+            this.MaDVT = row["MaDVT"].ToString();
             this.GiaBan = (int)row["GiaBan"];
             this.SoLuong = (int)row["SoLuong"];
         }
 
         public string MaMH { get => maMH; set => maMH = value; }
         public string TenMH { get => tenMH; set => tenMH = value; }
-        public string DonVi { get => donVi; set => donVi = value; }
+        public string MaDVT { get => maDVT; set => maDVT = value; }
+        public string MaQH { get => maQH; set => maQH = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public int GiaBan { get => giaBan; set => giaBan = value; }
     }

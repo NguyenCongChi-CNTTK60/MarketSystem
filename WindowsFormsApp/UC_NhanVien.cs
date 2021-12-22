@@ -28,8 +28,9 @@ namespace WindowsFormsApp
             cmbGioiTinh.Items.Add("Khác");
             cmbGioiTinh.SelectedIndex = 0;
             cmbChucVu.Items.Add("----- Chọn chức vụ ----");
-            cmbChucVu.Items.Add("Nhân viên");
+            cmbChucVu.Items.Add("Bán hàng");
             cmbChucVu.Items.Add("Quản lý");
+            cmbChucVu.Items.Add("Thủ kho");
             cmbChucVu.SelectedIndex = 0;
             HienThi();
 
@@ -164,11 +165,7 @@ namespace WindowsFormsApp
             uc.BringToFront();
         }
 
-        private void btnGiaoca_Click(object sender, EventArgs e)
-        {
-            UC_CaLamViecNhanVien f = new UC_CaLamViecNhanVien();
-            addUC(f);
-        }
+        
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -266,6 +263,25 @@ namespace WindowsFormsApp
             {
                 HienThi();
             }
+        }
+
+        private void dgvNV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            txtKH.Text = dgvNV.Rows[indexx].Cells[1].Value.ToString();
+            txtMaNV.Text = dgvNV.Rows[indexx].Cells[0].Value.ToString();
+            cmbGioiTinh.Text = dgvNV.Rows[indexx].Cells[2].Value.ToString();
+            txtDiachi.Text = dgvNV.Rows[indexx].Cells[3].Value.ToString();
+            txtSĐT.Text = dgvNV.Rows[indexx].Cells[4].Value.ToString();
+            cmbChucVu.Text = dgvNV.Rows[indexx].Cells[5].Value.ToString();
+            txtKH.ForeColor = Color.Black;
+            txtDiachi.ForeColor = Color.Black;
+            txtMaNV.ForeColor = Color.Black;
+            txtEmail.ForeColor = Color.Black;
+            txtSĐT.ForeColor = Color.Black;
+            cmbGioiTinh.ForeColor = Color.Black;
+            cmbChucVu.ForeColor = Color.Black;
         }
     }
 }

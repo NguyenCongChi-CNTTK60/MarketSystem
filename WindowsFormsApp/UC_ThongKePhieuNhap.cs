@@ -65,5 +65,13 @@ namespace WindowsFormsApp
             UC_ReportPhieuNhap f = new UC_ReportPhieuNhap(temp);
             addUC(f);
         }
+
+        private void dgvPN_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index;
+            index = e.RowIndex;
+
+            temp = dgvPN.Rows[index].Cells[0].Value.ToString();
+        }
     }
 }

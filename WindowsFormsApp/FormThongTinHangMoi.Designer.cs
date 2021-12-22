@@ -47,6 +47,9 @@ namespace WindowsFormsApp
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbQuayhang = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,6 +69,9 @@ namespace WindowsFormsApp
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.cmbQuayhang);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Controls.Add(this.label6);
@@ -86,6 +92,7 @@ namespace WindowsFormsApp
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(877, 384);
             this.panel3.TabIndex = 222;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnHuy
             // 
@@ -180,15 +187,14 @@ namespace WindowsFormsApp
             this.cmbĐVT.HoverState.Parent = this.cmbĐVT;
             this.cmbĐVT.ItemHeight = 30;
             this.cmbĐVT.Items.AddRange(new object[] {
-            "----- Chọn đơn vị -----",
-            "Chiếc",
-            "Bộ"});
+            "----- Chọn đơn vị -----"});
             this.cmbĐVT.ItemsAppearance.Parent = this.cmbĐVT;
             this.cmbĐVT.Location = new System.Drawing.Point(607, 243);
             this.cmbĐVT.Name = "cmbĐVT";
             this.cmbĐVT.ShadowDecoration.Parent = this.cmbĐVT;
             this.cmbĐVT.Size = new System.Drawing.Size(255, 36);
             this.cmbĐVT.TabIndex = 249;
+            this.cmbĐVT.Click += new System.EventHandler(this.cmbĐVT_Click);
             // 
             // label10
             // 
@@ -205,7 +211,7 @@ namespace WindowsFormsApp
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(145, 192);
+            this.label5.Location = new System.Drawing.Point(733, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 35);
             this.label5.TabIndex = 246;
@@ -235,7 +241,7 @@ namespace WindowsFormsApp
             this.txtTenMH.SelectedText = "";
             this.txtTenMH.SelectionStart = 17;
             this.txtTenMH.ShadowDecoration.Parent = this.txtTenMH;
-            this.txtTenMH.Size = new System.Drawing.Size(848, 44);
+            this.txtTenMH.Size = new System.Drawing.Size(557, 44);
             this.txtTenMH.TabIndex = 245;
             this.txtTenMH.Click += new System.EventHandler(this.txtTenMH_Click);
             // 
@@ -265,7 +271,7 @@ namespace WindowsFormsApp
             this.txtMaMH.ForeColor = System.Drawing.Color.Black;
             this.txtMaMH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaMH.HoverState.Parent = this.txtMaMH;
-            this.txtMaMH.Location = new System.Drawing.Point(12, 235);
+            this.txtMaMH.Location = new System.Drawing.Point(600, 114);
             this.txtMaMH.Margin = new System.Windows.Forms.Padding(7);
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.PasswordChar = '\0';
@@ -281,7 +287,7 @@ namespace WindowsFormsApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 192);
+            this.label4.Location = new System.Drawing.Point(601, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 32);
             this.label4.TabIndex = 241;
@@ -318,7 +324,7 @@ namespace WindowsFormsApp
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(5, 3);
             this.panel4.Name = "panel4";
@@ -335,6 +341,50 @@ namespace WindowsFormsApp
             this.label1.Size = new System.Drawing.Size(216, 23);
             this.label1.TabIndex = 16;
             this.label1.Text = "Thông tin mặt hàng mới";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(111, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 35);
+            this.label7.TabIndex = 256;
+            this.label7.Text = "*";
+            // 
+            // cmbQuayhang
+            // 
+            this.cmbQuayhang.BackColor = System.Drawing.Color.Transparent;
+            this.cmbQuayhang.BorderColor = System.Drawing.Color.Black;
+            this.cmbQuayhang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbQuayhang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbQuayhang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbQuayhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbQuayhang.FocusedState.Parent = this.cmbQuayhang;
+            this.cmbQuayhang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbQuayhang.ForeColor = System.Drawing.Color.Black;
+            this.cmbQuayhang.HoverState.Parent = this.cmbQuayhang;
+            this.cmbQuayhang.ItemHeight = 30;
+            this.cmbQuayhang.Items.AddRange(new object[] {
+            "----- Chọn loại hàng -----"});
+            this.cmbQuayhang.ItemsAppearance.Parent = this.cmbQuayhang;
+            this.cmbQuayhang.Location = new System.Drawing.Point(14, 243);
+            this.cmbQuayhang.Name = "cmbQuayhang";
+            this.cmbQuayhang.ShadowDecoration.Parent = this.cmbQuayhang;
+            this.cmbQuayhang.Size = new System.Drawing.Size(267, 36);
+            this.cmbQuayhang.TabIndex = 255;
+            this.cmbQuayhang.Click += new System.EventHandler(this.cmbQuayhang_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 192);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 35);
+            this.label8.TabIndex = 254;
+            this.label8.Text = "Quầy hàng";
             // 
             // FormThongTinHangMoi
             // 
@@ -376,5 +426,8 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label11;
         private FontAwesome.Sharp.IconButton btnLuu;
         private FontAwesome.Sharp.IconButton btnHuy;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbQuayhang;
+        private System.Windows.Forms.Label label8;
     }
 }

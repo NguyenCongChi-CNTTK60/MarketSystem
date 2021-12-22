@@ -30,7 +30,7 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new WindowsFormsApp.DataSet1();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,6 +38,7 @@ namespace WindowsFormsApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTk = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -56,18 +57,19 @@ namespace WindowsFormsApp
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnQuaylai);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.reportViewer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 1150);
+            this.panel1.Size = new System.Drawing.Size(1573, 1150);
             this.panel1.TabIndex = 0;
             // 
             // btnQuaylai
             // 
-            this.btnQuaylai.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnQuaylai.BackColor = System.Drawing.Color.White;
             this.btnQuaylai.FlatAppearance.BorderSize = 0;
             this.btnQuaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuaylai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,11 +92,12 @@ namespace WindowsFormsApp
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.lblTk);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 65);
+            this.panel2.Size = new System.Drawing.Size(1573, 65);
             this.panel2.TabIndex = 223;
             // 
             // lblTk
@@ -109,15 +112,23 @@ namespace WindowsFormsApp
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable3BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DataTable3BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp.Report.ReportHangTon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(245, 74);
+            this.reportViewer1.Location = new System.Drawing.Point(295, 74);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(932, 1076);
             this.reportViewer1.TabIndex = 222;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.Location = new System.Drawing.Point(3, 64);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1570, 1);
+            this.panel6.TabIndex = 227;
             // 
             // UC_ReportHangTon
             // 
@@ -126,7 +137,7 @@ namespace WindowsFormsApp
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.panel1);
             this.Name = "UC_ReportHangTon";
-            this.Size = new System.Drawing.Size(1411, 1150);
+            this.Size = new System.Drawing.Size(1573, 1150);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -144,5 +155,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTk;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Panel panel6;
     }
 }

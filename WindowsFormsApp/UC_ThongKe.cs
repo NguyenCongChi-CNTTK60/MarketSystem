@@ -16,10 +16,10 @@ namespace WindowsFormsApp
         public UC_ThongKe()
         {
             InitializeComponent();
-            HidesubMenu();
+           
             getDataChart();
             cmbLuaChon.SelectedIndex = 0;
-            DoanhThuTrongNgay();
+           
         }
 
         private void addUC(UserControl userControl)
@@ -32,31 +32,10 @@ namespace WindowsFormsApp
         }
 
 
-        private void HidesubMenu()
-        {
-            if (pnlMenu.Visible == true)
-            {
-                pnlMenu.Visible = false;
-            }
-        }
+      
 
-
-        private void showsubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                HidesubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
-
-        private void lblTk_Click(object sender, EventArgs e)
-        {
-            showsubMenu(pnlMenu);
-            
-        }
+       
+      
 
         string query = "USP_ThongKeDoanhThuTrongThang @ngaybd , @ngaykt";
 
@@ -107,27 +86,7 @@ namespace WindowsFormsApp
 
 
 
-        private void DoanhThuTrongNgay()
-        {
-            DateTime dt = new DateTime(today.Year, today.Month, today.Day);
-            string query = "select sum(TongTien) as [TongTien],count(MaHD) as [LuotMuaSam]  from HoaDon where NgayTao = '" + dt +"'";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            if(data.Rows.Count > 0) 
-            {
-                int TongTien;
-                string Tien = data.Rows[0]["TongTien"].ToString();
-                if (!string.IsNullOrEmpty(Tien))
-                {
-                    TongTien = Int32.Parse(Tien);
-                    lblTongDoanhThu.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", TongTien) + " đ";
-                    lblLuotMuaSam.Text = data.Rows[0]["LuotMuaSam"].ToString();
-
-                    int LoiNhuan = 0;
-                    LoiNhuan = TongTien - (TongTien * 70 / 100);
-                    lblTongloinhuan.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", LoiNhuan) + " đ";
-                }
-            }
-        }
+        
 
 
         private void ThucThi()
@@ -138,7 +97,7 @@ namespace WindowsFormsApp
             chart1.Series["Doanh Thu"].XValueMember = "NGAY";
             chart1.Series["Doanh Thu"].YValueMembers = "TONGTIEN";
             chart1.Titles.Add("THỐNG KÊ DOANH THU");
-            chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(59, 82, 132);
+            chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(0, 48, 135);
         }
 
         private void cmbLuaChon_SelectedIndexChanged(object sender, EventArgs e)

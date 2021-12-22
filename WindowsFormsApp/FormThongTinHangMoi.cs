@@ -20,23 +20,9 @@ namespace WindowsFormsApp
             cmbLoaiHang.SelectedIndex = 0;
             cmbĐVT.SelectedIndex = 0;
             txtMaMH.Text = Matudong();
+            cmbQuayhang.SelectedIndex = 0;
         }
         List<LoaiHangDTO> list1;
-
-        private void btnThemLoaiHang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLuu_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnX_Click(object sender, EventArgs e)
         {
@@ -76,7 +62,7 @@ namespace WindowsFormsApp
             {
                 int k;
                 ma = "SP";
-                k = dt.Rows.Count;
+                k = dt.Rows.Count + 3;
                 k++;
                 if (k < 10)
                 {
@@ -104,15 +90,29 @@ namespace WindowsFormsApp
             cmbLoaiHang.ValueMember = "MaLH";
         }
 
+
+        string temp2;
+        string temp3;
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            DataTable dt = QuayHangBUS.Intance.TimKiemQH(cmbQuayhang.Text);
+            if (dt.Rows.Count > 0)
+            {
+                temp3 = dt.Rows[0]["MaQH"].ToString();
+            }
+
+            DataTable dt1 = DonViTinhBUS.Intance.TimKiemDVT(cmbĐVT.Text);
+            if (dt1.Rows.Count > 0)
+            {
+                temp2 = dt1.Rows[0]["MaDVT"].ToString();
+            }
             if (string.IsNullOrEmpty(txtMaMH.Text))
             {
                 MessageBox.Show("Tên mặt hàng không được trống");
             }
             else
             {
-                if (LuuHH(txtMaMH.Text, txtTenMH.Text, cmbĐVT.Text, 0, 1, temp))
+                if (LuuHH(txtMaMH.Text, txtTenMH.Text, temp2, 0, 1, temp,temp3))
                 {
                     MessageBox.Show("Lưu thông tin hàng thành công");
                     txtMaMH.Text = Matudong();
@@ -126,10 +126,10 @@ namespace WindowsFormsApp
 
 
 
-        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg, string maLH)
+        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg, string maLH,string MaQH)
         {
             // Convert datetime to date SQL Server 
-            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan,MaLH)  values('{0}',N'{1}',N'{2}','{3}','{4}','{5}')", mh, tenh, madv, sl, dg, maLH);
+            string query = String.Format(" insert into MatHang (MaMH,TenMH,MaDVT,SoLuong,GiaBan,MaLH,MaQH)  values('{0}',N'{1}',N'{2}','{3}','{4}','{5}','{6}')", mh, tenh, madv, sl, dg, maLH,MaQH);
             DataProvider.Instance.ExecuteQuery(query);
             return true;
         }
@@ -152,6 +152,57 @@ namespace WindowsFormsApp
         {
             txtTenMH.Text = "";
             txtTenMH.ForeColor = Color.Black;
+        }
+
+        private void cmbĐVT_Click(object sender, EventArgs e)
+        {
+            list2 = getListDVT();
+            cmbĐVT.DataSource = list2;
+            cmbĐVT.ValueMember = "MaDVT";
+            cmbĐVT.DisplayMember = "TenDVT";
+        }
+
+
+        public List<DonViTinhDTO> getListDVT()
+        {
+            string query = "select * from DonViTinh";
+            List<DonViTinhDTO> list = new List<DonViTinhDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                DonViTinhDTO product = new DonViTinhDTO(item);
+                list.Add(product);
+            }
+            return list;
+        }
+        List<DonViTinhDTO> list2;
+
+        private void cmbQuayhang_Click(object sender, EventArgs e)
+        {
+            list3 = getListQuayHang();
+            cmbQuayhang.DataSource = list3;
+            cmbQuayhang.ValueMember = "MaQH";
+            cmbQuayhang.DisplayMember = "TenQH";
+        }
+
+
+        public List<QuayHangDTO> getListQuayHang()
+        {
+            string query = "select * from QuayHang";
+            List<QuayHangDTO> list = new List<QuayHangDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                QuayHangDTO product = new QuayHangDTO(item);
+                list.Add(product);
+            }
+            return list;
+        }
+        List<QuayHangDTO> list3;
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
