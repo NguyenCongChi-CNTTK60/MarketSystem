@@ -1127,7 +1127,7 @@ namespace WindowsFormsApp {
             
             private global::System.Data.DataColumn columnTenMH;
             
-            private global::System.Data.DataColumn columnDonVi;
+            private global::System.Data.DataColumn columnTenDVT;
             
             private global::System.Data.DataColumn columnSoLuong;
             
@@ -1188,9 +1188,9 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DonViColumn {
+            public global::System.Data.DataColumn TenDVTColumn {
                 get {
-                    return this.columnDonVi;
+                    return this.columnTenDVT;
                 }
             }
             
@@ -1263,12 +1263,12 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable3Row AddDataTable3Row(string MaMH, string TenMH, string DonVi, string SoLuong, string SLNhap, string SLBan, string GiaBan) {
+            public DataTable3Row AddDataTable3Row(string MaMH, string TenMH, string TenDVT, string SoLuong, string SLNhap, string SLBan, string GiaBan) {
                 DataTable3Row rowDataTable3Row = ((DataTable3Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaMH,
                         TenMH,
-                        DonVi,
+                        TenDVT,
                         SoLuong,
                         SLNhap,
                         SLBan,
@@ -1297,7 +1297,7 @@ namespace WindowsFormsApp {
             internal void InitVars() {
                 this.columnMaMH = base.Columns["MaMH"];
                 this.columnTenMH = base.Columns["TenMH"];
-                this.columnDonVi = base.Columns["DonVi"];
+                this.columnTenDVT = base.Columns["TenDVT"];
                 this.columnSoLuong = base.Columns["SoLuong"];
                 this.columnSLNhap = base.Columns["SLNhap"];
                 this.columnSLBan = base.Columns["SLBan"];
@@ -1311,8 +1311,8 @@ namespace WindowsFormsApp {
                 base.Columns.Add(this.columnMaMH);
                 this.columnTenMH = new global::System.Data.DataColumn("TenMH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTenMH);
-                this.columnDonVi = new global::System.Data.DataColumn("DonVi", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDonVi);
+                this.columnTenDVT = new global::System.Data.DataColumn("TenDVT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenDVT);
                 this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoLuong);
                 this.columnSLNhap = new global::System.Data.DataColumn("SLNhap", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2141,17 +2141,17 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DonVi {
+            public string TenDVT {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable3.DonViColumn]));
+                        return ((string)(this[this.tableDataTable3.TenDVTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DonVi\' in table \'DataTable3\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenDVT\' in table \'DataTable3\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable3.DonViColumn] = value;
+                    this[this.tableDataTable3.TenDVTColumn] = value;
                 }
             }
             
@@ -2245,14 +2245,14 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDonViNull() {
-                return this.IsNull(this.tableDataTable3.DonViColumn);
+            public bool IsTenDVTNull() {
+                return this.IsNull(this.tableDataTable3.TenDVTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDonViNull() {
-                this[this.tableDataTable3.DonViColumn] = global::System.Convert.DBNull;
+            public void SetTenDVTNull() {
+                this[this.tableDataTable3.TenDVTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

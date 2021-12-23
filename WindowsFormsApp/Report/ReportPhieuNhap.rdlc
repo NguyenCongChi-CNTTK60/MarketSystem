@@ -423,8 +423,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>2.89507in</Top>
         <Left>0.07502in</Left>
-        <Height>0.77083in</Height>
-        <Width>6.10554in</Width>
+        <Height>0.77084in</Height>
+        <Width>6.10552in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -800,12 +800,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Cửa Hàng Thời Trang </Value>
+                <Value>Coop</Value>
                 <Style>
                   <FontFamily>Sitka Banner</FontFamily>
-                  <FontSize>13pt</FontSize>
+                  <FontSize>15pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                   <Color>Blue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Mart</Value>
+                <Style>
+                  <FontFamily>Sitka Banner</FontFamily>
+                  <FontSize>15pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>Brown</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -813,9 +822,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Left>0.11669in</Left>
+        <Top>0.05556in</Top>
+        <Left>2.68137in</Left>
         <Height>0.33333in</Height>
-        <Width>1.91666in</Width>
+        <Width>0.97222in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -878,10 +888,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.29167in</Top>
-        <Left>0.11669in</Left>
+        <Top>0.34723in</Top>
+        <Left>1.56472in</Left>
         <Height>0.25in</Height>
-        <Width>3.67834in</Width>
+        <Width>3.41305in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>

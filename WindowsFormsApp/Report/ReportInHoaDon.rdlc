@@ -93,12 +93,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>CỬA HÀNG THỜI TRANG</Value>
+                    <Value>Coop</Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>15pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Blue</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Mart</Value>
+                    <Style>
+                      <FontFamily>Sitka Banner</FontFamily>
+                      <FontSize>15pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Brown</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -106,9 +115,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Left>0.94543in</Left>
+            <Left>1.42583in</Left>
             <Height>0.31944in</Height>
-            <Width>2.01166in</Width>
+            <Width>0.9561in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -608,8 +617,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.38667in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.16445in</Top>
+            <Left>0.28472in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>14</ZIndex>
@@ -650,8 +659,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.60889in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.38667in</Top>
+            <Left>0.28472in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>15</ZIndex>
@@ -692,8 +701,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.87972in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.6575in</Top>
+            <Left>0.28472in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>16</ZIndex>
@@ -738,7 +747,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>5.2686in</Top>
-            <Left>0.9675in</Left>
+            <Left>1.15277in</Left>
             <Height>0.3125in</Height>
             <Width>1.56249in</Width>
             <ZIndex>18</ZIndex>
@@ -922,6 +931,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
                                   <Value>=Fields!TenMH.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
@@ -986,6 +1001,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+                                  <Value xml:space="preserve">   </Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
                                   <Value>=Fields!DonGia.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
@@ -1021,7 +1042,7 @@
                                   <Value>=Fields!SoLuong.Value*Fields!DonGia.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0;(#,0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1076,48 +1097,6 @@
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox16">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Đã giảm:  </Value>
-                    <Style>
-                      <FontFamily>Sitka Banner</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!Tiendagiam.Value</Value>
-                    <Style>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.06723in</Top>
-            <Left>0.28473in</Left>
-            <Height>0.31944in</Height>
-            <Width>3.15277in</Width>
-            <ZIndex>20</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
         <Height>5.85417in</Height>
         <Style />
@@ -1141,10 +1120,6 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Tiendagiam">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="TongTien">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -1164,11 +1139,6 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Tienhoantra</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>Tiendagiam</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>

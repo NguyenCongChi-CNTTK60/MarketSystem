@@ -222,7 +222,7 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 48, 135);
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
-            Phanquyen(_NhaCungCap, _HienThiQuyen,_HienThiQuyen);
+            Phanquyen(_NhaCungCap, _NhaCungCap,_HienThiQuyen);
 
             ButtonHide();
             btnNhaCungCap.BackColor = Color.White;
@@ -234,7 +234,7 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 48, 135);
             UC_KhoHang _KhoHang = new UC_KhoHang(lblMaNV.Text,lblTenNV.Text);
-            Phanquyen(_KhoHang, _HienThiQuyen,_HienThiQuyen);
+            Phanquyen(_KhoHang, _KhoHang,_HienThiQuyen);
 
             ButtonHide();
             btnKhoHang.BackColor = Color.White;

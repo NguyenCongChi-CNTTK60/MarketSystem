@@ -25,8 +25,8 @@
           <DataField>TenMH</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="DonVi">
-          <DataField>DonVi</DataField>
+        <Field Name="TenDVT">
+          <DataField>TenDVT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="SoLuong">
@@ -48,7 +48,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Nguyen Cong Chi\Downloads\MarketShop\WindowsFormsApp\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>DataTable3</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -67,12 +67,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Cửa Hàng Thời Trang </Value>
+                    <Value>Coop</Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>15pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Blue</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Mart</Value>
+                    <Style>
+                      <FontFamily>Sitka Banner</FontFamily>
+                      <FontSize>15pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Brown</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -80,10 +89,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.12847in</Top>
-            <Left>0.12722in</Left>
+            <Top>0.08681in</Top>
+            <Left>2.49064in</Left>
             <Height>0.33333in</Height>
-            <Width>1.91666in</Width>
+            <Width>1.02777in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -146,7 +155,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.42014in</Top>
-            <Left>0.12722in</Left>
+            <Left>1.44898in</Left>
             <Height>0.25in</Height>
             <Width>3.67834in</Width>
             <ZIndex>2</ZIndex>
@@ -510,20 +519,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="DonVi">
+                        <Textbox Name="TenDVT">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value xml:space="preserve">  </Value>
+                                  <Value xml:space="preserve"> </Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Fields!DonVi.Value</Value>
+                                  <Value>=Fields!TenDVT.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                   </Style>
@@ -532,7 +541,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>DonVi</rd:DefaultName>
+                          <rd:DefaultName>TenDVT</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>

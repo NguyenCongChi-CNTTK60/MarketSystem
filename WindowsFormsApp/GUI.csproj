@@ -614,6 +614,9 @@
     <None Include="Resources\Capture5.PNG" />
     <None Include="Resources\Capture6.PNG" />
     <None Include="Resources\Capture7.PNG" />
+    <None Include="Resources\Capture8.PNG" />
+    <None Include="Resources\Capture11.PNG" />
+    <None Include="Resources\Capture31.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

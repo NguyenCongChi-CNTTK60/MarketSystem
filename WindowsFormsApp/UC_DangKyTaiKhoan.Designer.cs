@@ -33,7 +33,7 @@ namespace WindowsFormsApp
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDangNhap = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDangKy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label22 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -62,18 +62,18 @@ namespace WindowsFormsApp
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnQuaylai = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -116,25 +116,26 @@ namespace WindowsFormsApp
             this.label23.TabIndex = 319;
             this.label23.Text = "Tài khoản của bạn đã sẵn sàng?\r\n\r\n";
             // 
-            // btnDangNhap
+            // btnDangKy
             // 
-            this.btnDangNhap.BorderRadius = 15;
-            this.btnDangNhap.CheckedState.Parent = this.btnDangNhap;
-            this.btnDangNhap.CustomImages.Parent = this.btnDangNhap;
-            this.btnDangNhap.DisabledState.Parent = this.btnDangNhap;
-            this.btnDangNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.btnDangNhap.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
-            this.btnDangNhap.FocusedColor = System.Drawing.Color.White;
-            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.HoverState.Parent = this.btnDangNhap;
-            this.btnDangNhap.Location = new System.Drawing.Point(742, 689);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.ShadowDecoration.Parent = this.btnDangNhap;
-            this.btnDangNhap.Size = new System.Drawing.Size(371, 64);
-            this.btnDangNhap.TabIndex = 318;
-            this.btnDangNhap.Text = "Đăng ký";
+            this.btnDangKy.BorderRadius = 15;
+            this.btnDangKy.CheckedState.Parent = this.btnDangKy;
+            this.btnDangKy.CustomImages.Parent = this.btnDangKy;
+            this.btnDangKy.DisabledState.Parent = this.btnDangKy;
+            this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.btnDangKy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
+            this.btnDangKy.FocusedColor = System.Drawing.Color.White;
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.HoverState.Parent = this.btnDangKy;
+            this.btnDangKy.Location = new System.Drawing.Point(742, 689);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.ShadowDecoration.Parent = this.btnDangKy;
+            this.btnDangKy.Size = new System.Drawing.Size(371, 64);
+            this.btnDangKy.TabIndex = 318;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // label22
             // 
@@ -175,6 +176,7 @@ namespace WindowsFormsApp
             this.guna2TextBox1.Size = new System.Drawing.Size(422, 47);
             this.guna2TextBox1.TabIndex = 316;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(15, 0);
+            this.guna2TextBox1.Click += new System.EventHandler(this.guna2TextBox1_Click);
             // 
             // guna2GradientButton1
             // 
@@ -325,6 +327,8 @@ namespace WindowsFormsApp
             this.txtDiachi.Size = new System.Drawing.Size(887, 47);
             this.txtDiachi.TabIndex = 306;
             this.txtDiachi.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtDiachi.Click += new System.EventHandler(this.txtDiachi_Click_1);
+            this.txtDiachi.Leave += new System.EventHandler(this.txtDiachi_Leave);
             // 
             // label18
             // 
@@ -365,6 +369,8 @@ namespace WindowsFormsApp
             this.txtSĐT.Size = new System.Drawing.Size(422, 47);
             this.txtSĐT.TabIndex = 304;
             this.txtSĐT.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtSĐT.Click += new System.EventHandler(this.txtSĐT_Click);
+            this.txtSĐT.Leave += new System.EventHandler(this.txtSĐT_Leave_1);
             // 
             // label19
             // 
@@ -405,6 +411,8 @@ namespace WindowsFormsApp
             this.txtTennv.Size = new System.Drawing.Size(439, 47);
             this.txtTennv.TabIndex = 302;
             this.txtTennv.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtTennv.Click += new System.EventHandler(this.txtTennv_Click_1);
+            this.txtTennv.Leave += new System.EventHandler(this.txtTennv_Leave);
             // 
             // label20
             // 
@@ -445,6 +453,8 @@ namespace WindowsFormsApp
             this.txtMatkhau.Size = new System.Drawing.Size(422, 47);
             this.txtMatkhau.TabIndex = 300;
             this.txtMatkhau.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtMatkhau.Click += new System.EventHandler(this.txtMatkhau_Click_1);
+            this.txtMatkhau.Leave += new System.EventHandler(this.txtMatkhau_Leave);
             // 
             // label21
             // 
@@ -485,6 +495,8 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.Size = new System.Drawing.Size(439, 47);
             this.txtTenDangNhap.TabIndex = 298;
             this.txtTenDangNhap.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtTenDangNhap.Click += new System.EventHandler(this.txtTenDangNhap_Click_1);
+            this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave_1);
             // 
             // panel2
             // 
@@ -592,6 +604,20 @@ namespace WindowsFormsApp
             this.label10.TabIndex = 302;
             this.label10.Text = "Đổi mật khẩu mới";
             // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gray;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.Gray;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 45;
+            this.iconPictureBox5.Location = new System.Drawing.Point(13, 640);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(45, 49);
+            this.iconPictureBox5.TabIndex = 301;
+            this.iconPictureBox5.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gray;
@@ -600,6 +626,20 @@ namespace WindowsFormsApp
             this.panel5.Size = new System.Drawing.Size(3, 90);
             this.panel5.TabIndex = 300;
             // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gray;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.Gray;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 45;
+            this.iconPictureBox4.Location = new System.Drawing.Point(12, 526);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(45, 49);
+            this.iconPictureBox4.TabIndex = 297;
+            this.iconPictureBox4.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
@@ -607,6 +647,20 @@ namespace WindowsFormsApp
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(3, 90);
             this.panel4.TabIndex = 296;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gray;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.Gray;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 45;
+            this.iconPictureBox3.Location = new System.Drawing.Point(12, 412);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(45, 49);
+            this.iconPictureBox3.TabIndex = 293;
+            this.iconPictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -638,6 +692,19 @@ namespace WindowsFormsApp
             this.label2.TabIndex = 290;
             this.label2.Text = "Cấp lại mật khẩu";
             // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 45;
+            this.iconPictureBox2.Location = new System.Drawing.Point(12, 298);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(45, 49);
+            this.iconPictureBox2.TabIndex = 289;
+            this.iconPictureBox2.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Gray;
@@ -667,61 +734,6 @@ namespace WindowsFormsApp
             this.label3.Size = new System.Drawing.Size(183, 32);
             this.label3.TabIndex = 286;
             this.label3.Text = "Đăng nhập hệ thống";
-            // 
-            // iconPictureBox5
-            // 
-            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gray;
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.Gray;
-            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox5.IconSize = 45;
-            this.iconPictureBox5.Location = new System.Drawing.Point(13, 640);
-            this.iconPictureBox5.Name = "iconPictureBox5";
-            this.iconPictureBox5.Size = new System.Drawing.Size(45, 49);
-            this.iconPictureBox5.TabIndex = 301;
-            this.iconPictureBox5.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gray;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.Gray;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 45;
-            this.iconPictureBox4.Location = new System.Drawing.Point(12, 526);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(45, 49);
-            this.iconPictureBox4.TabIndex = 297;
-            this.iconPictureBox4.TabStop = false;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gray;
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.Gray;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 45;
-            this.iconPictureBox3.Location = new System.Drawing.Point(12, 412);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(45, 49);
-            this.iconPictureBox3.TabIndex = 293;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 45;
-            this.iconPictureBox2.Location = new System.Drawing.Point(12, 298);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(45, 49);
-            this.iconPictureBox2.TabIndex = 289;
-            this.iconPictureBox2.TabStop = false;
             // 
             // iconPictureBox1
             // 
@@ -773,7 +785,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDangNhap);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2GradientButton1);
@@ -812,7 +824,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDangNhap;
         private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDangKy;
         private System.Windows.Forms.Label label22;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;

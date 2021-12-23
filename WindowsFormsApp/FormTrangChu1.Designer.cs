@@ -35,6 +35,7 @@ namespace WindowsFormsApp
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -57,6 +58,8 @@ namespace WindowsFormsApp
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.BoThongKE = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -78,7 +81,7 @@ namespace WindowsFormsApp
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(80, 1150);
+            this.panelLeft.Size = new System.Drawing.Size(81, 1150);
             this.panelLeft.TabIndex = 4;
             // 
             // lblQuyen
@@ -117,11 +120,25 @@ namespace WindowsFormsApp
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.iconPictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(80, 145);
+            this.panel2.Size = new System.Drawing.Size(81, 145);
             this.panel2.TabIndex = 34;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(135)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Wpressr;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 72;
+            this.iconPictureBox2.Location = new System.Drawing.Point(3, 27);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(72, 91);
+            this.iconPictureBox2.TabIndex = 17;
+            this.iconPictureBox2.TabStop = false;
             // 
             // btnDangXuat
             // 
@@ -134,7 +151,7 @@ namespace WindowsFormsApp
             this.btnDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDangXuat.IconSize = 43;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(12, 1073);
+            this.btnDangXuat.Location = new System.Drawing.Point(3, 1073);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnDangXuat.Size = new System.Drawing.Size(84, 65);
@@ -316,9 +333,9 @@ namespace WindowsFormsApp
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(80, 0);
+            this.panel1.Location = new System.Drawing.Point(81, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1587, 1150);
+            this.panel1.Size = new System.Drawing.Size(1586, 1150);
             this.panel1.TabIndex = 5;
             // 
             // BoBtnTrangChu
@@ -390,6 +407,8 @@ namespace WindowsFormsApp
             this.Text = "FormTrangChu1";
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +441,6 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse BoBanhang;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Guna.UI2.WinForms.Guna2Elipse BoThongKE;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }

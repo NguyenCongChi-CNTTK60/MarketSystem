@@ -55,6 +55,14 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
@@ -260,6 +268,7 @@ namespace WindowsFormsApp
             this.txtMKMOI.PasswordChar = '\0';
             this.txtMKMOI.PlaceholderText = "";
             this.txtMKMOI.SelectedText = "";
+            this.txtMKMOI.SelectionStart = 17;
             this.txtMKMOI.ShadowDecoration.Parent = this.txtMKMOI;
             this.txtMKMOI.Size = new System.Drawing.Size(591, 54);
             this.txtMKMOI.TabIndex = 298;
@@ -332,6 +341,7 @@ namespace WindowsFormsApp
             this.txtHoVaTen.PasswordChar = '\0';
             this.txtHoVaTen.PlaceholderText = "";
             this.txtHoVaTen.SelectedText = "";
+            this.txtHoVaTen.SelectionStart = 19;
             this.txtHoVaTen.ShadowDecoration.Parent = this.txtHoVaTen;
             this.txtHoVaTen.Size = new System.Drawing.Size(591, 54);
             this.txtHoVaTen.TabIndex = 295;

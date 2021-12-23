@@ -46,6 +46,16 @@ namespace WindowsFormsApp
 
             lblMahd.Text = Matudong();
             cmbLoaiHang.SelectedIndex = 0;
+
+            DateTime dt = DateTime.Now;
+            dtpNgayban.Value = dt;
+
+            this.manv = manv;
+            lblMaNV.Text = manv;
+            this.tennv = tennv;
+            lblTennv.Text = tennv;
+
+           
         }
 
 
@@ -155,8 +165,8 @@ namespace WindowsFormsApp
                 tongTien += gia;
                 lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", tongTien) + " đ";
                // lbTienBangChu.Text = ChuyenDoiTien.Instance.So_chu(tongTien);
-                //Tinhtienhoantra();
-                //resetInfoProduct();
+                Tinhtienhoantra();
+                resetInfoProduct();
 
             }
             else
@@ -174,11 +184,82 @@ namespace WindowsFormsApp
                     lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", tongTien) + " đ";
                     
                     lvSanPhamBan.Items[i].Remove();//xóa item đó đi
-                    //Tinhtienhoantra();
+                    Tinhtienhoantra();
                     i--;
 
                 }
             }
+        }
+
+
+
+
+
+
+
+        KhachHangDTO khachHang = new KhachHangDTO()
+        {
+            MaKH = null
+        };
+
+
+
+      
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                string id = txtTimkiem.Text;
+                string query = "select * from KhachHang where SDT ='" + id + "'";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                if(data.Rows.Count > 0)
+                {
+                    lblMaKH.Text = data.Rows[0]["MaKH"].ToString();
+                    lblTenkh.Text = data.Rows[0]["TenKH"].ToString();
+                }
+                else
+                {
+                    lblTenkh.Text = "Khách hàng mới";
+                    lblMaKH.Text = "KH00";
+                }
+
+
+               
+                lblMaKH.ForeColor = Color.Black;           
+                lblTenkh.ForeColor = Color.Black;
+                
+            }
+            else
+            {
+
+
+                lblTenkh.Text = "Khách hàng mới";
+                lblMaKH.Text = "KH00";
+                lblTenkh.ForeColor = Color.Black;
+                lblMaKH.ForeColor = Color.Black;
+            }
+        }
+
+
+
+        private void Tinhtienhoantra()
+        {
+            if (!string.IsNullOrEmpty(txtTienkhachdua.Text))
+            {
+                int tienkhachdua = Int32.Parse(txtTienkhachdua.Text);
+                int tienhoantra = tienkhachdua - tongTien;
+                lblTienHoanTra.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", tienhoantra) + " đ";
+                lblTienKhachDua.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", tienkhachdua) + " đ";
+            }
+            else
+                lblTienHoanTra.Text = "0đ";
+        }
+
+
+        private void txtTienkhachdua_TextChanged(object sender, EventArgs e)
+        {
+            Tinhtienhoantra();
         }
 
         private void cmbLoaiHang_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -192,8 +273,91 @@ namespace WindowsFormsApp
             }
         }
 
-        
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                MessageBox.Show("Chưa có thông tin của khách hàng");
+            }
+            else
+            if (lvSanPhamBan.Items.Count > 0)
+            {
+                HoaDonDTO hd = new HoaDonDTO();
+                hd.MaHD = lblMahd.Text;
+                hd.MaKH = lblMaKH.Text;
+                hd.NgayTao = dtpNgayban.Value;
+                hd.MaNV = lblMaNV.Text;
+                hd.TongTien = tongTien;
 
+
+
+
+                if (LuuHD(hd))   // lưu hóa đơn
+                {
+                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
+                    foreach (ListViewItem item in lvSanPhamBan.Items)
+                    {
+                        LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
+                        string query = "update MatHang set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                        DataProvider.Instance.ExecuteQuery(query);
+
+                    }
+                    FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, lblTienKhachDua.Text,lblTienHoanTra.Text, lblTienbangso.Text);
+                    formInHoaDon.Show();
+                    lvSanPhamBan.Items.Clear();
+                    lblTienbangso.Text = "0 đ";
+                    lblTienKhachDua.Text = "0đ";
+                    lblTienHoanTra.Text = "0đ";                 
+                    lblMaKH.Text = "KH00";
+                    lblTenkh.Text = "Chưa xác định";
+                    tongTien = 0;
+                    lblMahd.Text = Matudong();
+                    txtTienkhachdua.Text = "";
+                    txtTimkiem.Text = "";
+
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
+            }
+        }
+
+
+        //
+        // Lưu hóa đơn
+        //
+        private bool LuuHD(HoaDonDTO dh)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format("insert into HoaDon values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.MaNV, dh.TongTien);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+
+        private bool LuuDH(string mahd, string mahh, int sl, int dg)
+        {
+            string query = String.Format("insert into Chitiethd values('{0}','{1}','{2}','{3}')", mahd, mahh, sl, dg);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+        private void txtTimkiem_Click(object sender, EventArgs e)
+        {
+            txtTimkiem.Text = "";
+            txtTimkiem.ForeColor = Color.Black;
+        }
+
+        private void resetInfoProduct()
+        {
+            lblMahh.Text = "";
+            cmbTenHang.SelectedIndex = -1;
+            txtSoLuong.Value = 0;
+            //cmbTenmh.Text = "";
+            lblGiaban.Text = "0đ";
+        }
     }
 }
 
